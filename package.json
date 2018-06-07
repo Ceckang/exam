@@ -1,0 +1,22 @@
+{
+  "name": "exam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "my-sass": "node-sass -w source/css/style.scss build/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ceckang/exam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ceckang/exam/issues"
+  },
+  "homepage": "https://github.com/Ceckang/exam#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  }
+}
