@@ -1,1 +1,4 @@
 source/img/*
+node_modules
+TODO
+test.js
