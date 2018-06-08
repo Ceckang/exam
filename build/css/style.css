@@ -1,70 +1,79 @@
-#dashboard {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); }
-  #dashboard #dashboardTemp {
+/*  #dashboard {
     display: grid;
-    grid-column: 1/4; }
+    grid-template-columns: repeat(3, 1fr);
+    #dashboardTemp {
+        display: grid;
+        grid-column: 1/4;
+        
+    }
 
-h1 {
-  text-align: center;
-  font-family: 'courier new';
-  font-size: 20pt;
-  font-weight: bold; }
+} */
+#recieveBartenders {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: return(3, 1fr); }
+  #recieveBartenders #bartenderTemp {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas: "h2 h2 h2"; }
 
-h2 {
-  text-align: center;
-  font-family: 'courier new';
-  font-size: 15pt;
-  font-weight: bold; }
-
-#wrapper {
-  position: relative;
-  margin: auto; }
-
-#meter {
-  width: 100%;
-  height: 100%;
-  transform: rotateX(180deg); }
-
-.circle {
-  fill: none; }
-
-.outline, #mask {
-  stroke: #222;
-  stroke-width: 65; }
-
-.range {
-  stroke-width: 60; }
-
-#lbl {
-  position: absolute; }
-
-/*   #slider {
-    cursor: pointer;
-    left: 0;
+#queue {
+  /* h1{
+    text-align: center;
+    //color: white;
+    font-family: 'courier new';
+    font-size: 20pt;
+    font-weight: bold;
+    }
+    h2{
+    text-align: center;
+    //color: white;
+    font-family: 'courier new';
+    font-size: 15pt;
+    font-weight: bold;
+    
+    } */ }
+  #queue #wrapper {
+    position: relative;
     margin: auto;
-    right: 0;
-    top: 58%;
-    width: 94%; 
-  } */
-#lbl {
-  background-color: #4B4C51;
-  border-radius: 2px;
-  color: white;
-  font-family: 'courier new';
-  font-size: 15pt;
-  font-weight: bold;
-  padding: 4px 4px 2px 4px;
-  right: -48px;
-  top: 57%; }
-
-#meter_needle {
-  height: 40%;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  top: 10%;
-  transform-origin: bottom center;
-  /*orientation fix*/
-  transform: rotate(270deg); }
+    /*   #slider {
+      cursor: pointer;
+      left: 0;
+      margin: auto;
+      right: 0;
+      top: 58%;
+      width: 94%; 
+    } */ }
+    #queue #wrapper #meter {
+      width: 100%;
+      height: 100%;
+      transform: rotateX(180deg); }
+      #queue #wrapper #meter .circle {
+        fill: none; }
+      #queue #wrapper #meter .outline, #queue #wrapper #meter #mask {
+        stroke: #222;
+        stroke-width: 40; }
+      #queue #wrapper #meter .range {
+        stroke-width: 35; }
+    #queue #wrapper #lbl {
+      position: absolute; }
+    #queue #wrapper #lbl {
+      background-color: #4B4C51;
+      border-radius: 2px;
+      color: white;
+      font-family: "courier new";
+      font-size: 15pt;
+      font-weight: bold;
+      padding: 4px 4px 2px 4px;
+      right: -48px;
+      top: 57%; }
+    #queue #wrapper #meter_needle {
+      height: 40%;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 10%;
+      transform-origin: bottom center;
+      /*orientation fix*/
+      transform: rotate(270deg); }

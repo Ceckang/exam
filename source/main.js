@@ -12,8 +12,18 @@ dataJson.storage.name */
 
  dataJson.storage.forEach(function(e){
     let clone = document.querySelector("#dashboardTemp").content.cloneNode(true);
-    clone.querySelector("h2").textContent = e.name;
+    clone.querySelector("#storageTemp").textContent = e.name;
     document.querySelector("#storage").appendChild(clone);
+    /* clone.querySelector("#bartenderTemp").textContent = e.name;
+    document.querySelector("#dashboard").appendChild(clone); */
+});
+
+dataJson.bartenders.forEach(function(e){
+    let clone = document.querySelector("#dashboardTemp").content.cloneNode(true);
+    clone.querySelector("#bartenderTemp").textContent = e.name;
+    document.querySelector("#recieveBartenders").appendChild(clone);
+    /* clone.querySelector("#bartenderTemp").textContent = e.name;
+    document.querySelector("#dashboard").appendChild(clone); */
 });
 
     /* function dataFunc(){ }
@@ -38,9 +48,9 @@ let semi_cf = cf / 2;
 let semi_cf_1by3 = semi_cf / 3;
 let semi_cf_2by3 = semi_cf_1by3 * 2;
 document.querySelector("#outline_curves").setAttribute("stroke-dasharray", semi_cf + "," + cf);
-document.querySelector("#low").setAttribute("stroke-dasharray", semi_cf + "," + cf);
-document.querySelector("#avg").setAttribute("stroke-dasharray", semi_cf_2by3 + "," + cf);
-document.querySelector("#high").setAttribute("stroke-dasharray", semi_cf_1by3 + "," + cf);
+document.querySelector("#bar").setAttribute("stroke-dasharray", semi_cf + "," + cf);
+/* document.querySelector("#avg").setAttribute("stroke-dasharray", semi_cf_2by3 + "," + cf);
+document.querySelector("#high").setAttribute("stroke-dasharray", semi_cf_1by3 + "," + cf); */
 document.querySelector("#outline_ends").setAttribute("stroke-dasharray", 2 + "," + (semi_cf - 2));
 document.querySelector("#mask").setAttribute("stroke-dasharray", semi_cf + "," + cf);
 
@@ -64,6 +74,9 @@ lbl.textContent = "In Q for beer: " + queue;
 //slider.addEventListener("input", range_change_event);
 
 range_change_event();
+/* setInterval(function(){ 
+    funktionNavn();    
+}, 2500); */
 }
 Qmeter();
 //LAv en funktion for alle elementer og kald dem i 
