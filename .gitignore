@@ -1,4 +1,14 @@
 source/img/*
+source/fonts/*
+ai/*
 node_modules
 TODO
 test.js
+Dokumentation.docx
+storage.html
+storage2.html
+taps.html
+taps2.html
+taps3.html
+img/beer/*
+source/css/_storageTest.scss

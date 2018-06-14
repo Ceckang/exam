@@ -9,12 +9,17 @@
     <script src="http://petlatkea.dk/2018/front/foobar.js"></script>    
 </head>
 <body>
-    <h1>FooBar</h1>
+    <!-- <h1>FooBar</h1> -->
+    
     <div id="closingtime">
-            <h2>closing time count-down!</h2>
+            <!-- <h2>FooBar</h2> -->
+    <img src="svg/FoobarLogo.svg" alt="">
+            <p>Bar closes in</p>
+            <div id="clockDisplay">
+            </div>
     </div>
     <div id="dashboard">
-        <div id="queue">
+        <div id="queue" class="comp">
             <h2>Q</h2>
             <div id="wrapper">
                     <svg id="meter">
@@ -45,37 +50,105 @@
                     <label id="lbl" id="value" for="">0</label>
                 </div>
         </div>
-        <div id="serving">
-                <h2>Serving</h2>
-            
+        <!-- <div id="serving" class="comp">
+            <h2>Serving</h2>
+            <div id="recieveServing"></div> 
+        </div> -->
+        <div id="bartenders" class="comp">
+            <h2>Bartenders</h2>
+            <div id="recieveBartenders"></div>     
         </div>
-        <div id="bartenders">
-                <h2>Bartenders</h2>
-        <div id="recieveBartenders">
-            <h2>name</h2>
-        </div>
-                
-        </div>
-        <div id="taps"> 
+        <div id="taps" class="comp"> 
             <h2>Taps!</h2>
             <p>We're keeping taps on you!</p>
+            <div id="recieveTaps"></div>
         </div>
-        <div id="storage">
-                <h2>Storage</h2>            
+        <div id="storage" class="comp">
+                <h2>Storage</h2>
+        <div id="recieveStorage"></div>                 
         </div>
-        <div id="beertypes">
+        <!-- <div id="beertypes" class="comp">
             <h2>Beertypes</h2>
-        </div>
+            <div id="recieveTypes"></div>
+        </div> -->
     </div>
-    <template id="dashboardTemp">
+
+    <template id="bartenderTemp">
+        <article class="component">
+            <div class="top_part"> 
+                 <img src="img/bartender/peter.jpg" alt="anon"> 
+            </div>
+            <div class="bottom_part">
+                <h1>NAME</h1>
+                <div class="status">status</div>
+                <div class="statusDetail">statusDetail</div>
+                
+                <div class="tap">tap</div>
+                <div class="serving">tap</div>
+            </div>
+        </article>
+    </template>
+
+    <template id="storageTemp">
+            <article class="component">
+                <div class="side_part">
+                        <p>In storage</p>                    
+                </div>
+                <div class="bottom_part">
+                    <!-- <div class="amount">amount</div> -->
+                    <ul class="bar-graph"> 
+                        <li>
+                          <div class="bar-wrap"><span class="bar-fill" style="width: 20%;"></span></div>
+                        </li> 
+                      </ul>
+                </div>
+            </article>
+        </template>
+
+        <template id="tapsTemp">
+                <article class="component">     
+                    <h3></h3>
+                                <p class="amount">%</p>
+                                <svg version="1.1" x="0px" y="0px" width="200" height="200" viewBox="100 100 301 301" style="enable-background:new 0 0 501 501;" xml:space="preserve">
+                                <style type="text/css">
+                                    .cup{fill:#FFF;stroke:#FFF;stroke-width:2;stroke-miterlimit:10;}
+                                </style>
+                                <defs>
+                                <mask id="liquidMasked">
+                                <path fill="#FFF" d="M294.3,377.1c-32.8,9.4-68.2,9.3-101-0.2c-7.1-60.7-14.1-119.7-21.5-175.6c48.3,0,96.5,0,144.8,0 C309,257.2,301.7,316.3,294.3,377.1z"/>
+                                </mask>
+                                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:rgb(218, 89, 0);stop-opacity:1" />
+                                        <stop offset="40%" style="stop-color:rgb(255,185,0);stop-opacity:1" />
+                                        <stop offset="70%" style="stop-color:rgb(218, 89, 0);stop-opacity:1" />                                  
+                                                                          
+                                        <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                                      </linearGradient>
+                                </defs>
+                                <!-- <rect x="0.5" y="0.5" class="bg" width="500" height="500"/> -->
+                                <path class="cup" d="M301.4,382.2c-37.4,10.4-77.9,10.3-115.2-0.3c-8.1-66.7-16.1-131.6-24.5-193c55.1,0,110.1,0,165.2,0
+                                C318.1,250.3,309.8,315.3,301.4,382.2z"/>
+                                
+                                <g id="coffeeMasked" mask="url(#liquidMasked)">
+                                <path class="liquid" fill=url(#grad2) d="M293.8,376.6c-32.8,9.4-68.2,9.3-101-0.2c-7.1-60.7-14.1-119.7-21.5-175.6c0,0,12-7.1,31.3-0.4
+                                c29.8,10.3,32.7-0.2,48.7-0.2c27.4,0,29.2,8.8,44.7,1.3c14.7-7.1,20.2-0.7,20.2-0.7C308.5,256.7,301.2,315.8,293.8,376.6z"/>
+                                </g>
+                                </svg>                  
+                </article>
+            </template>
+
+    <!-- <template id="dashboardTemp">
         <h2></h2>
         <div id="bartenderTemp">
             <h2 class="bartenderName">name</h2>
+            <h2 class="bartenderStatus">name</h2>
+            
             
         </div>
+        
         <div id="storageTemp"></div>
 
-    </template>
+    </template> -->
     <script src="main.js"></script>
 </body>
 </html>
