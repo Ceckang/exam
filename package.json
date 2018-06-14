@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "my-sass": "node-sass -w source/css/style.scss build/css/style.css"
+    "my-sass": "node-sass source/css/style.scss build/css/style.css",
+    "autoprefix": "postcss build/css/style.css --use autoprefixer -d build/css/",
+    "minifycss": "postcss build/css/*.css --use cssnano -d build/css/",
+    "allcss": "npm run my-sass && npm run autoprefix && npm run minifycss",
+    "watch": "watch \"npm run allcss\" source/"
   },
   "repository": {
     "type": "git",
@@ -17,6 +21,10 @@
   },
   "homepage": "https://github.com/Ceckang/exam#readme",
   "devDependencies": {
-    "node-sass": "^4.9.0"
+    "autoprefixer": "^8.6.2",
+    "node-sass": "^4.9.0",
+    "postcss": "^6.0.22",
+    "postcss-cli": "^5.0.0",
+    "watch": "^1.0.2"
   }
 }
