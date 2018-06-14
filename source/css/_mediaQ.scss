@@ -1,0 +1,44 @@
+/* Media Q */
+@media (min-width: 576px) {
+    #recieveBartenders{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        }
+    #recieveTaps{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+             
+        }
+}
+
+@media (min-width: 768px) {
+    #closingtime{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+        
+        #clockDisplay{
+            align-self: flex-end;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0px 0px 10px #ff0000, 1px 1px 2px #ff0000,-1px 1px 2px #ff0000, -1px -1px 2px #ff0000, 1px -1px 2px #ff0000
+            ;
+            //font-family: Digital;
+            font-weight: 100;
+            font-size: 2em;
+            color: rgb(245, 191, 43);
+            
+        }
+    }
+
+    #recieveBartenders{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+        }
+    #recieveTaps{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+             
+        }
+}
